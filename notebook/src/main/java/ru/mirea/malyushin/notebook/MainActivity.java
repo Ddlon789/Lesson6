@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 strings.add(line);
                 line = reader.readLine();
             }
-            binding.citata.setText(strings.toString());
+            binding.citata.setText(strings.toString()
+                    .substring(1, strings.toString().length() - 1));
         } catch (Exception e) {
             e.printStackTrace();
         }
